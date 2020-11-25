@@ -1,5 +1,7 @@
 <footer class="footer">
-    {{- if .Site.Copyright }}
+    {{- if .Site.Params.backToSiteLink }}
+    <span>Back to </span><a href="{{ .Site.Params.backToSiteLink.href }}">{{ .Site.Params.backToSiteLink.display }}</a>
+    {{- else if .Site.Copyright }}
     <span>{{ .Site.Copyright | markdownify }}</span>
     {{- else }}
     <span>&copy; {{ now.Year }} <a href="{{ "" | absLangURL }}">{{ .Site.Title }}</a></span>

@@ -47,8 +47,12 @@
     transition: transform .1s
 }
 
+.post-entry:hover {
+    transform: scale(1.01)
+}
+
 .post-entry:active {
-    transform: scale(.96)
+    transform: scale(.99)
 }
 
 .tag-entry .entry-cover {
