@@ -18,7 +18,7 @@
 
 {{ $paginator := .Paginate $pages }}
 {{ $term := .Data.Term}}
-{{- range $index, $page := $paginator.Pages }}
+{{- range $index, $page := $paginator.Pages.Reverse }}
 
 {{- $class := "post-entry" }}
 {{- if (and $.IsHome (eq $paginator.PageNumber 1) (eq $index 0)) }}
